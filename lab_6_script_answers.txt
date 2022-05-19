@@ -1,0 +1,57 @@
+Name: Xinyu Jiang
+1.
+ CREATE TABLE IF NOT EXISTS universities(
+	University_Name TEXT Not NULL,
+	Date_Established DATE,
+	Address TEXT Not NULL,
+	Student_Population INT Not NULL,
+	Acceptance_Rate REAL Not NULL
+);
+
+2.
+INSERT INTO universities(University_Name,Date_Established, Address, Student_Population, Acceptance_Rate)
+VALUES('CU Boulder','18760901', '1100 28th St, Boulder, CO 80303', 35000, 0.8);
+
+3.
+select name, major  FROM football_players ORDER by major
+
+4.
+select name,rushing_yards  from football_players where rushing_yards >70; 
+
+5.
+select * from football_games where visitor_name='Nebraska'
+
+6.
+select* from football_games where home_score>visitor_score
+
+7.
+select visitor_name, game_date from football_games where game_date>'20180101';
+
+8.
+create view winning_games AS
+select COUNT(*) as winCount from football_games where home_score>visitor_score;
+select * FROM winning_games;
+
+9.
+create view games_played as select COUNT(*) as gameCount from football_games;
+select * FROM games_played;
+
+10.
+create view winning_games as select COUNT(*) as winCount from football_games where home_score>visitor_score;
+select * FROM winning_games;
+
+create view games_played as select COUNT(*) as gameCount FROM football_games;
+select * FROM games_played;
+
+select cast((winCount) as float)/cast((gameCount) as float) as percentage  from winning_games,games_played;
+
+
+11.
+select COUNT(*) as gamePlay from football_games where (select id from football_players Where name='Cedric Vega')=any(players);
+
+12.
+select cast((rushing_yards) as float)/(select COUNT(*) as gamePlay from football_games where (select id from football_players Where name='Cedric Vega')=any(players)) from football_players where football_players.name='Cedric Vega';
+
+
+
+

@@ -1,0 +1,63 @@
+
+.alignleft {
+
+	float: left;
+
+}
+
+.alignright {
+
+	float: right;
+}
+
+.collapse dl{
+	padding-left:30px;
+}
+.collapsing dl{
+	padding-left:30px;
+}
+.collapse dd{
+	padding-left:30px;
+}
+
+.collapsing dd{
+	padding-left:30px;
+}
+
+.collapseAll, .expandAll{
+
+	margin:5px;
+
+}
+
+
+.alignbtn{
+
+	float: right;
+
+	margin-top:-2px;
+
+	margin-left:10px;
+
+}
+
+
+
+#bottom_nav{
+
+	position:fixed;
+	
+	width:100%;
+
+	bottom:0;
+
+	padding-bottom:10px;
+
+	padding-top:10px;
+
+}
+
+
+
+
+

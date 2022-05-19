@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homework 4 Description</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1>Web Services</h1>
+            <p>In this assignment, we create a web page showing the weather across the USA.</p>
+        </div>
+    </div>
+
+    <!-- Resouces needed table start-->
+    <div class="container">
+        <h4> Resources needed for the below questions: </h4>
+        
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Resource</th>
+                        <th scope="col">Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">What is DOM?</th>
+                        <td><a target="_blank" class="btn btn-primary" href="https://www.youtube.com/watch?v=XD7fYLQeQIg"
+                                role="button">Link1</a> <br/> <br/> <a target="_blank" class="btn btn-primary" href="https://www.geeksforgeeks.org/dom-document-object-model/"
+                                role="button">Link2</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Document.get Methods</th>
+                        <td><a target="_blank" class="btn btn-primary"
+                                href="https://www.digitalocean.com/community/tutorials/how-to-access-elements-in-the-dom"
+                                role="button">Link</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">JQuery Document.get methods</th>
+                        <td><a target="_blank" class="btn btn-primary" href="https://api.jquery.com/id-selector/"
+                                role="button">Link</a> <br/> Note: I always forget the # needed in the beginning, you might too.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">String templating</th>
+                        <td><a target="_blank" class="btn btn-primary" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"
+                                role="button">Link</a> <br/> Note: The ${variable_name} way is the easiest way to do string concat. I personally use it for all my projects</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Making $.ajax calls to API</th>
+                        <td><a target="_blank" class="btn btn-primary" href="http://api.jquery.com/jquery.ajax/"
+                                role="button">Link</a> <br/>Note: You can use $.get too, but this is just easier</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Setting CSS properties using jquery</th>
+                        <td><a target="_blank" class="btn btn-primary" href="http://api.jquery.com/css/"
+                                role="button">Link</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">What is an SVG File</th>
+                        <td><a target="_blank" class="btn btn-primary" href="https://www.w3schools.com/graphics/svg_intro.asp"
+                                role="button">Link</a></td>
+                    </tr>
+                    <tr>
+                            <th scope="row">Viewing SVG Files</th>
+                            <td><a target="_blank" class="btn btn-primary" href="https://www.lifewire.com/svg-file-4120603"
+                                    role="button">Link</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Resouces needed table end-->
+
+    <div class="container">
+
+        <div class="row">
+            <p>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#overallobjective"
+                    aria-expanded="false" aria-controls="overallobjective">
+                    Overall Objective
+                </button>
+            </p>
+            <div class="collapse" id="overallobjective">
+                <div class="card card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                                In this assignment, we create a web page showing the weather across the USA.<br/>
+                                We will use the <a href="https://darksky.net/dev" target="_blank"> Dark Sky Forecast API </a> from Lab 9 as the data source.<br/>
+                                Each state will be color-coded per its current temperature.<br/>
+                                All your code goes only inside index.html and index.js in the StudentWebsite folder. Do not modify any other files.
+                        </li>                     
+                    </ul>
+                </div>
+            </div>
+        </div>        
+        
+        <br />
+
+        <div class="row">
+                <p>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#setupapi"
+                        aria-expanded="false" aria-controls="setupapi">
+                        API Setup
+                    </button>
+                </p>
+                <div class="collapse" id="setupapi">
+                    <div class="card card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                1. Head over to <a href="https://darksky.net/dev" target="_blank">Dark Sky API</a>
+                            </li>    
+                            <li class="list-group-item">
+                                2. Click Try for free
+                            </li>    
+                            <li class="list-group-item">
+                                3. Register: fill in your email, password and confirm password
+                            </li>                              
+                            <li class="list-group-item">
+                                4. Head over to your email and click the confirmation link
+                            </li>  
+                            <li class="list-group-item">
+                                5. You will see the welcome screen after clicking the link. Then in the top right corner click Log in.
+                            </li>    
+                            <li class="list-group-item">
+                                6. The API that you will need is the One in the "Sample API Call". It looks something like
+                                https://api.darksky.net/forecast/-your-key-here-/37.8267,-122.4233
+                            </li>                                                
+                        </ul>
+                    </div>
+                </div>
+        </div>    
+            
+            <br/>
+
+        <div class="row">
+                <p>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#part1"
+                        aria-expanded="false" aria-controls="part1">
+                        Part 1: Reading the SVG
+                    </button>
+                </p>
+                <div class="collapse" id="part1">
+                    <div class="card card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                 We will be working with SVGs for this part. The first step is for you read up what SVGs are from the Resources above.
+                            </li>  
+                            <li class="list-group-item">
+                                We need the SVG of the United States Map. This can be found <a href="https://upload.wikimedia.org/wikipedia/commons/1/1a/Blank_US_Map_%28states_only%29.svg" target="_blank">here</a>
+                            </li>                     
+                            <li class="list-group-item">
+                                If you save the SVG locally, it's not going to work since there's no way to actually view the XML code for it. So instead head over to the <a href="https://upload.wikimedia.org/wikipedia/commons/1/1a/Blank_US_Map_%28states_only%29.svg" target="_blank">link</a> provided above, right click and click View Page Source
+                            </li>
+                            <li class="list-group-item">
+                                <iframe width="971" height="546" src="https://www.youtube.com/embed/5uxxc8W0Oso" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </li>
+                            <li class="list-group-item">
+                                Paste the contents you see on the browser in index.html between the 'Paste World Map Here' and the 'End of World Map' tags
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+
+            <div class="row">
+                    <p>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#part2"
+                            aria-expanded="false" aria-controls="part2">
+                            Part 2: Reading the JS
+                        </button>
+                    </p>
+                    <div class="collapse" id="part2">
+                        <div class="card card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                     Read the state_info.js into index.html at the 'Import state_info.js here'
+                                </li>  
+                                <li class="list-group-item">
+                                     Read the index.js into index.html at the 'Import index.js here'
+                                   </li>                     
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <br/>
+
+                <div class="row">
+                        <p>
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#part3"
+                                aria-expanded="false" aria-controls="part3">
+                                Part 3: Index.js
+                            </button>
+                        </p>
+                        <div class="collapse" id="part3">
+                            <div class="card card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        Paste your API key in index.js where it is marked "Enter your API Key here"
+                                    </li>  
+                                    <li class="list-group-item">
+                                        Look at the SVG that you pasted, it has a bunch of IDs that are State Codes. You can change the color of a state code by doing "$('#CO').css('fill', "blue")" for example    
+                                    </li>  
+                                    <li class="list-group-item">
+                                        Iterate over each of the rows in the json and make an API call to the Dark Sky API using the latitude and longitude that we saw before.<br/>
+                                        <a src="https://stackoverflow.com/questions/14810506/map-function-for-objects-instead-of-arrays" target="_blank">Here</a> is how you iterate over a json with a list of Jsons.
+                                    </li>                     
+                                    <li class="list-group-item">
+                                        For each of these, make an API call to Dark sky. Note that the API calls are limited. So use them wisely. If you want to see how the response json looks look at /examples/example_api_response.json. If you run out of requests, make a new account.
+                                    </li>
+                                    <li class="list-group-item">
+                                            The color to be used for a state should be determined based on the following temperature range table
+                                            <br/>
+                                            <table class = 'table'>
+                                                    <tr>
+                                                      <th>Temperature</th>
+                                                      <th>Color</th>                                                      
+                                                    </tr>
+                                                    <tr>
+                                                      <td>[default]</td>
+                                                      <td>Gray</td>                                                      
+                                                    </tr>
+                                                    <tr>
+                                                      <td>Less than equal to 10F</td>
+                                                      <td>Blue</td>                          
+                                                    </tr>
+                                                    <tr>
+                                                      <td>11F and equal to 30F</td>
+                                                      <td>Cyan</td>                                                      
+                                                    </tr>
+                                                    <tr>
+                                                      <td>31F and equal to 50F</td>
+                                                      <td>Green</td>                                                      
+                                                    </tr>
+                                                    <tr>
+                                                      <td>51F and equal to  80F </td>
+                                                      <td>Orange</td>                                                      
+                                                    </tr>
+                                                    <tr>
+                                                      <td>Greater than 80F</td>
+                                                      <td>Red</td>                                                      
+                                                    </tr>
+                                            </table>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <img src="../StudentWebsite/examples/sample_output.png" alt="Smiley face">
+                                        <br/>
+                                        The above is a sample of how the final image needs to be
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+
+                <br/>
+
+                <div class="row">
+                        <p>
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#part4"
+                                aria-expanded="false" aria-controls="part4">
+                                Part 4: Submission details
+                            </button>
+                        </p>
+                        <div class="collapse" id="part4">
+                            <div class="card card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        Zip the whole StudentWebsite into a zip and upload that to moodle
+                                    </li>                                     
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+
+                <br/>
+                
+                <div class="row">
+                        <p>
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#rubric"
+                                aria-expanded="false" aria-controls="rubric">
+                                Rubric
+                            </button>
+                        </p>
+                        <div class="collapse" id="rubric">
+                            <div class="card card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        1. 5 points for setting up for API correctly.
+                                    </li> 
+                                    <li class="list-group-item">
+                                        2. 5 points for pasting the SVG correctly.
+                                    </li>   
+                                    <li class="list-group-item">
+                                        3. 2 points for reading the two JS files correctly.
+                                    </li>                                  
+                                    <li class="list-group-item">
+                                        4. 20 points to iterate over the JSON objects
+                                    </li>   
+                                    <li class="list-group-item">
+                                        5. 18 points for making the $.ajax call to the API
+                                    </li>   
+                                    <li class="list-group-item">
+                                        6. 30 points for displaying the states with the correct color.
+                                    </li>   
+
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+</body>
+
+
+</html>

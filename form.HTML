@@ -1,0 +1,64 @@
+<h1>This is a sample form.</h1>
+	<div class="container">
+	<div class="form-group row">
+    <label for="Name" class="col-sm-2 col-form-label"><strong>Nickname</label></strong>
+    <div class="col-sm-10">
+      <input type="text" style="width: 600px; height: 40px" class="form-control" id="Name" placeholder="Enter Nickname">
+    </label>
+    <br></br>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="Email" class="col-sm-2 col-form-label"><strong>Email address</label></strong>
+    <div class="col-sm-10">
+      <input type="email" style="width: 600px; height: 40px" class="form-control" id="Email" placeholder="Enter email">
+      <br></br>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="Password" class="col-sm-2 col-form-label"><strong>Password</label></strong>
+    <div class="col-sm-10">
+      <input type="password" style="width: 600px; height: 40px" class="form-control" id="Password" placeholder="Password">
+      <br></br>
+    </div>
+  </div>
+</div>
+
+<p>Gender</p>
+<form>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other<br>
+  <input type="radio" name="gender" value="other"> Prefer not to say<br>
+</form>
+<p>Security Question</p>
+<select class="form-control">
+      <option>What is your favourite type of pet</option>
+      <option>What is your favourite ride sharing service</option>
+      <option>Where do you want to work after you finish your education</option>
+    </select>
+<p><strong>Answer</p></strong>
+<input type="text" style="width: 600px; height: 40px" class="form-control"  placeholder="Security Answer">
+<p><strong>Favourite Programming Languages</p></strong>
+<form>
+  <input type="checkbox" name="language1" value="C/C++">C/C++
+  <input type="checkbox" name="language2" value="Java">Java
+  <input type="checkbox" name="language3" value="Javascript">Javascript
+  <input type="checkbox" name="language4" value="Python">Python
+  <input type="checkbox" name="language5" value="Go">Go
+  <input type="checkbox" name="language6" value="C#">C#
+  <input type="checkbox" name="language7" value="PHP">PHP
+</form>
+<p><strong>Additional Information</p></strong>
+<p>About me</p>
+<form>
+  <textarea style="width: 500px; height: 100px"></textarea>
+</form>
+
+<style>
+  .button{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  }
+</style>
+<button class="button" style="width: 80px; height: 40px">Submit</button>
